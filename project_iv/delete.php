@@ -1,9 +1,10 @@
+
 <?php
 include "connect.php";
-if(isset($_GET['id']))
+if(isset($_GET['sid']))
 {
-    $delete_id=$_GET['id'];
-    $sql="DELETE FROM users id='$delete_id'";
+    $delete_id=$_GET['sid'];
+    $sql="DELETE FROM shoes WHERE sid='$delete_id'";
     $result= mysqli_query($conn,$sql);
     if($result){
         echo "deleted sucessfully";
@@ -13,3 +14,6 @@ if(isset($_GET['id']))
     }
     
 }
+
+
+

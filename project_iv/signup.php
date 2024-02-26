@@ -5,21 +5,39 @@
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        if(!empty($email) && !empty($password) ){
+        $signupsucc = false; // Sign Up Successfully
 
-            $Checksql = "SELECT * FROM users WHERE email='$email'";
-            $checkResult = mysqli_query($conn, $Checksql);
-            $checkNum = mysqli_num_rows($checkResult);
+        if(!empty($email) && !empty($password) && !empty($username) ){
 
-            if($checkNum < 1){
-                $sql ="INSERT INTO users(username, email, password)
-                VALUE('$username', '$email', '$password')
-                ";
+            if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $sql = "SELECT * FROM users WHERE email='$email'";
                 $result = mysqli_query($conn, $sql);
-                header('location:login.php');
-            }
-           }
-          }
+            
+                if (mysqli_num_rows($result) != 0) {
+                    echo "*Email already exists. Try another one.";
+                }
+                    else {  
+                        $pattern = '/^[A-Z].*\d.*$/';
+
+                        if (preg_match($pattern, $password)) {
+
+                            $sql ="INSERT INTO users(username, email, password)
+                            VALUE('$username', '$email', '$password')
+                            ";
+                             $result = mysqli_query($conn, $sql);
+                             if ($result) {
+                                $signupsucc = true; // Sign Up Successfully
+                                header('location:login.php');
+                                exit;
+                            }
+                        }else {
+                            echo "*Password must be 6 characters with one uppercase letter and one number.";
+                        }
+                    } 
+                    }
+                }
+    }
+          
             ?>
 
 <!DOCTYPE html>
@@ -27,11 +45,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>signup page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>welcome! please login</h2>
+    <h2>welcome! please signup</h2>
     <form <?php $_SERVER['PHP_SELF']?>method= "POST" >
         <div class="div1">
         

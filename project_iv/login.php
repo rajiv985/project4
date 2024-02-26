@@ -10,8 +10,12 @@
             $result= mysqli_query($conn,$sql);
             
             
-            if(mysqli_num_rows($result)>0){
+            
+           if(mysqli_num_rows($result)>0){
             header('location:homee.php');
+            }
+            else{
+                echo "Email or Password is Invalid";
             }
            }
           }

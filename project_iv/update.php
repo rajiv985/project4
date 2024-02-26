@@ -1,37 +1,37 @@
 <?php
     include 'connect.php';
 
-    if(isset($_POST['update'])){
-        $user_id = $_POST['user_id'];
-        $full_name = $_POST['full_name'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $gender = $_POST['gender'];
-    }
+    if(isset($_POST['submit'])){
+        $shoename = $_POST['shoename'];
+        $brand = $_POST['brand'];
+        $size = $_POST['size'];
+        $color = $_POST['color'];
+        $picture = $_POST['picture'];
 
     $sql = "
-    UPDATE users SET full_name= '$full_name', email = '$email', password='$password' , gender='$gender';
+    UPDATE shoes SET shoename= '$shoename', brand = '$brand', size='$size' , color='$color',picture='$picture'";
 
-    $result = mysqli_query($conn, $sql);
+    $result= mysqli_query($conn,$sql);
     if($result == True){
-        echo "Records updated Successfully";
+        echo 'updated Successfully';
   header('location:read.php');
     }
     else{
-        echo"error:"
+        echo"error:";
     }
 }
-if (isset($_GET['id'])){
-    $user_id = $_GET['id'];
-    $sql = "SELECT * FROM users WHERE id="$user_id";
+if (isset($_GET['sid'])){
+    $sid = $_GET['sid'];
+    $sql = "SELECT * FROM shoes WHERE sid='$sid'";
         $result=mysqli_query($conn,$sql);
         if(mysqli_num_rows($result)>0){
             while($row=mysql_fetch_assoc($result)){
-                $full_name = $row['full_name'];
-                $email = $row['email'];
-                $password = $row['password'];
-                $gender = $row['gender']; 
-                $id=$row['id'];
+                $shoename = $row['shoename'];
+                $brand = $row['brand'];
+                $size = $row['size'];
+                $color = $row['color'];
+                $picture = $row['picture']; 
+                $sid=$row['sid'];
             }
         }
     }
@@ -41,42 +41,29 @@ if (isset($_GET['id'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fill Form</title>
+    <title>Fill form</title>
 </head>
 <body>
     <h2>use update form</h2>
-    <form action ="<?php echo $_SERVER[PHP_SELF];
-    ?>" method="POST">
+      <form <?php $_SERVER['PHP_SELF']?>method= "POST" >
     <field set>
-        <legend>personal information:</legend>
-        <label>Full Name:</label>
-        <input type="text" name="full_name"><br>
+        <legend>shoes information:</legend>
+        <label>shoe Name:</label>
+        <input type="text" name="shoename"><br>
         <br>
-        <label>Email:</label>
-        <input type="text" name="email"><br>
+        <label>brand:</label>
+        <input type="text" name="brand"><br>
         <br>
-        <label>Password:</label>
-        <input type="password" name="password"><br>
-        <br>
-        <label>Gender</label>
-        <input type="radio" name="gender" value="Male"
-        <?php if($gender=='Male'){
-            echo"checked";
-        }
-        ?>>
-        Male<br><br>
-        <input type="radio" name="gender" value="Female"
-        <?php if($gender=='Female'){
-            echo"checked";
-        }
-        ?>>
-        female<br><br>
-        <input type="radio" name="gender" value="Others"
-        <?php if($gender=='Others'){
-            echo"checked";
-        }
-        ?>>
-        Others<br><br>
+        <select name="size" id="size">
+         <option value disabled required>"select size:"</option>
+         <option value="31">31</option>
+         <option value="32">32</option>
+         <option value="33">33</option>
+         </select><br>        
+         <label>color</label>
+        <input type="text" name="color">
+        <label>picture</label>
+        <input type="file" name="picture">
         <input type="submit" name="submit" value="submit">
     </field set>
     </form>

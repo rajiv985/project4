@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pahilo phaila</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hello.css">
     <style>
         /* Responsive navigation */
         nav ul {
@@ -40,6 +40,9 @@
 
             .one {
                 text-align: center;
+
+
+                
             }
         }
     </style>
@@ -69,57 +72,173 @@
         </nav>
     </div>
     <img src="RRR.jpg" style="max-width: 100%;">
-    <div class="box">
-        <pre>Delivery</pre>
-        <pre>Delivery Across All Major </pre>
-        <pre>Cities and Towns in Nepal</pre>
+      <!--  Features -->
+      <div class="features">
+        <div class="feature">
+            <img src="./img/shipping.png" alt="" class="featureIcon">
+            <span class="featureTitle">FREE SHIPPING</span>
+            <span class="featureDescription">Free worldwide shipping on all orders.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/return.png" alt="">
+            <span class="featureTitle">30 DAYS RETURN</span>
+            <span class="featureDescription">No question return and easy refund in 14 days.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/gift.png" alt="">
+            <span class="featureTitle">GIFT CARDS</span>
+            <span class="featureDescription">Buy gift cards and use coupon codes easily.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/contact.png" alt="">
+            <span class="featureTitle">CONTACT US</span>
+            <span class="featureDescription">Keep in touch via email and support system.</span>
+        </div>
     </div>
-    <div class="Box">
-        <pre>payment method</pre>
-        <pre>Digital wallet,banking </pre>
-        <pre>method accepted</pre>
+
+    <!-- Products -->
+    <div class="product" id="product">
+        <img src="./img/air.png" alt="" class="productImage">
+        <div class="productDetails">
+            <h1 class="productTitle">AIR FORCE</h1>
+            <h2 class="productPrice">$199</h2>
+            <p class="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores laborum
+                aperiam
+                quasi, harum recusandae debitis!</p>
+
+            <div class="colors">
+                <div class="color"></div>
+                <div class="color"></div>
+            </div>
+            <div class="sizes">
+                <div class="size">42</div>
+                <div class="size">43</div>
+                <div class="size">44</div>
+            </div>
+            <button class="productButton">BUY NOW</button>
+        </div>
+        <!-- Payment -->
+        <div class="payment">
+            <h1 class="payTitle">Personal Information</h1>
+            <label>Name & Surname</label>
+            <input type="text" class="payInput" placeholder="Janette Bennett">
+            <label>Phone</label>
+            <input type="text" class="payInput" placeholder="+1 123 4567">
+            <label>Address</label>
+            <input type="text" class="payInput" placeholder="Delta St. 23 42-167">
+            <h1 class="payTitle">Card Information</h1>
+            <div class="cardIcons">
+                <img src="./img/visa.png" width="35px" alt="visa" class="cardIcon">
+                <img src="./img/master.png" width="35px" alt="mastercard" class="cardIcon">
+            </div>
+            <input type="password" class="payInput" placeholder="Card Number">
+            <div class="cardInfo">
+                <input type="text" class="payInput small" placeholder="mm">
+                <input type="text" class="payInput small" placeholder="yyyy">
+                <input type="text" class="payInput small" placeholder="cvv">
+            </div>
+            <button class="payButton">Checkout</button>
+            <span class="close">X</span>
+        </div>
     </div>
-    <div class="AA">
-        <img src="YYY.avif" style="max-width: 100%;">
-        <img src="JJJ.avif" style="max-width: 100%;">
-        <img src="WWW.avif" style="max-width: 100%;">
-        <img src="TTT.avif" style="max-width: 100%;">
+
+    <!-- Gallery -->
+
+    <div class="gallery">
+        <div class="galleryItem">
+            <h1 class="galleyTitle">Be Yourself</h1>
+            <img src="https://images.pexels.com/photos/9295809/pexels-photo-9295809.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                alt="" class="galleryImage">
+        </div>
+        <div class="galleryItem">
+            <img src="https://images.pexels.com/photos/1040427/pexels-photo-1040427.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                alt="" class="galleryImage">
+            <h1 class="galleryTitle">This is the First Day of Your New Life</h1>
+        </div>
+        <div class="galleryItem">
+            <h1 class="galleryTitle">Just Do it</h1>
+            <img src="https://images.pexels.com/photos/7856965/pexels-photo-7856965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                alt="" class="galleryImage">
+        </div>
     </div>
-    <h1>New Arrivals</h1>
-    <h3>shop all new arrivals</h3>
-    <div class="container">
-        <img src="16p.avif" style="max-width: 100%;">
-        <p style="font-weight: bold;">pahilo phaila 01</p>
-        <p style="color: blue;">example 01</p>
-        <p>Rs 2500 <del style="color: blue;"> Rs 3000</del></p>
+
+    <!-- New Season -->
+
+    <div class="newSeason">
+        <div class="nsItem">
+            <img src="https://images.pexels.com/photos/4753986/pexels-photo-4753986.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                alt="" class="nsImage">
+        </div>
+        <div class="nsItem">
+            <h3 class="nsTitleSmall">WINTER NEW ARRIVALS</h3>
+            <h1 class="nsTitle">New Season</h1>
+            <h1 class="nsTitle">New Collection</h1>
+            <a href="#nav">
+                <button class="nsButton">CHOOSE YOUR STYLE</button>
+            </a>
+        </div>
+        <div class="nsItem">
+            <img src="https://images.pexels.com/photos/7856965/pexels-photo-7856965.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                alt="" class="nsImage">
+        </div>
     </div>
-    <div class="container">
-        <img src="12p.avif" style="max-width: 100%;">
-        <p style="font-weight: bold;">pahilo phaila 02</p>
-        <p style="color: blue;">example 02</p>
-        <p>Rs 2500 <del style="color: blue;"> Rs 3000</del></p>
-    </div>
-    <div class="container">
-        <img src="15p.avif" style="max-width: 100%;">
-        <p style="font-weight: bold;">pahilo phaila 03</p>
-        <p style="color: blue;">example 03</p>
-        <p>Rs 2500 <del style="color: blue;"> Rs 3000</del></p>
-    </div>
-    <div class="container">
-        <img src="16p.avif" style="max-width: 100%;">
-        <p style="font-weight: bold;">pahilo phaila 04</p>
-        <p style="color: blue;">example 04</p>
-        <p>Rs 2500 <del style="color: blue;"> Rs 3000</del></p>
-    </div>
-    <div class="one">
-        <pre id="o">Your Outdoor Companion</pre>
-        <pre>G100A Full Black- Best For Running, Sports, And Comfort.</pre>
-        <pre id="q">RS. 2525/-</pre>
-        <button> shop now</button>
-        <img src="14p.avif" style="max-width: 100%;">
-    </div>
-</body> 
+
+    <!-- Footer -->
+    <footer>
+        <div class="footerLeft">
+            <div class="footerMenu">
+                <h1 class="footerMenuTitle">About Us</h1>
+                <ul class="footerMenuList">
+                    <li class="footerListItem">Company</li>
+                    <li class="footerListItem">Contact</li>
+                    <li class="footerListItem">Careers</li>
+                    <li class="footerListItem">Affiliates</li>
+                    <li class="footerListItem">Stores</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="footerMenuTitle">Useful Links</h1>
+                <ul class="footerMenuList">
+                    <li class="footerListItem">Support</li>
+                    <li class="footerListItem">Refund</li>
+                    <li class="footerListItem">FAQ</li>
+                    <li class="footerListItem">Feedback</li>
+                    <li class="footerListItem">Stories</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="footerMenuTitle">Products</h1>
+                <ul class="footerMenuList">
+                    <li class="footerListItem">Air Force</li>
+                    <li class="footerListItem">Air Jordan</li>
+                    <li class="footerListItem">Blazer</li>
+                    <li class="footerListItem">Crater</li>
+                    <li class="footerListItem">Hippie</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerRight">
+            <div class="footerRightMenu">
+                <h1 class="footerMenuTitle">Subscribe to our newsletter</h1>
+                <div class="footerMail">
+                    <input type="text" placeholder="your@email.com" class="footerInput">
+                    <button class="footerButton">Join</button>
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <h1 class="footerMenuTitle">Follow Us</h1>
+                <div class="footerIcons">
+                    <img src="./img/facebook.png" alt="" class="footerIcon">
+                    <img src="./img/twitter.png" alt="" class="footerIcon">
+                    <img src="./img/instagram.png" alt="" class="footerIcon">
+                    <img src="./img/whatsapp.png" alt="" class="footerIcon">
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <span class="copyright">Made by Bloodhawks. All rights reserved. 2024</span>
+            </div>
+        </div>
+    </footer>
+</body>
 
 </html>
-<?php include 'footer.php';
-?>

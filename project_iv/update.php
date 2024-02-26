@@ -7,7 +7,7 @@
         $size = $_POST['size'];
         $color = $_POST['color'];
         $picture = $_POST['picture'];
-
+        
     $sql = "
     UPDATE shoes SET shoename= '$shoename', brand = '$brand', size='$size' , color='$color',picture='$picture'";
 
@@ -42,12 +42,66 @@ if (isset($_GET['sid'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fill form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        input[type="file"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        input[type="reset"]:hover {
+            background-color: #f35a4b;
+        }
+    </style>
 </head>
 <body>
-    <h2>use update form</h2>
       <form <?php $_SERVER['PHP_SELF']?>method= "POST" >
     <field set>
-        <legend>shoes information:</legend>
+        <h2>shoes information:</h2>
         <label>shoe Name:</label>
         <input type="text" name="shoename"><br>
         <br>
